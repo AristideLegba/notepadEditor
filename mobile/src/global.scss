@@ -1,0 +1,435 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+
+/* Core CSS required for Ionic components to work properly */
+
+@import "~@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+
+@import "~@ionic/angular/css/normalize.css";
+@import "~@ionic/angular/css/structure.css";
+@import "~@ionic/angular/css/typography.css";
+@import '~@ionic/angular/css/display.css';
+
+/* Optional CSS utils that can be commented out */
+
+@import "~@ionic/angular/css/padding.css";
+@import "~@ionic/angular/css/float-elements.css";
+@import "~@ionic/angular/css/text-alignment.css";
+@import "~@ionic/angular/css/text-transformation.css";
+@import "~@ionic/angular/css/flex-utils.css";
+.themeBlack {
+    color: rgb(255, 255, 255) !important;
+    ion-input,
+    ion-textarea {
+        border-bottom: 1px solid white;
+    }
+    --background: #222428;
+    ion-toolbar {
+        --background: rgba($color: #222428, $alpha: 1);
+        div {
+            margin-right: 5px;
+        }
+        ion-icon {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        color: rgb(255, 255, 255);
+    }
+    .color_switcher {
+        display: inline-block;
+        text-align: center;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        // margin-left: 10%;
+        ul {
+            float: left;
+            text-decoration: none;
+            list-style-type: none;
+            li {
+                text-align: center;
+                .color {
+                    // background-color: rgba($color: #0082fc, $alpha: 1.0);
+                    min-width: 20px;
+                    width: 20px;
+                    max-width: 20px;
+                    min-height: 20px;
+                    height: 20px;
+                    max-height: 20px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                }
+                .toggleButtonBlack {
+                    margin: 0px 0px 0px 0px !important;
+                    --handle-background: #050505 !important;
+                    --handle-background-checked: #050505 !important;
+                    --background: #ffffff !important;
+                    --background-checked: #191a1b !important;
+                    // max-width: 20px;
+                    // max-height: 20px;
+                    // font-size: 20px;
+                }
+            }
+        }
+    }
+    .body {
+        background: rgba($color: #222428, $alpha: 1);
+        color: rgb(255, 255, 255) !important;
+        // min-height: 100%;
+        // height: 100%;
+        // max-height: 100%;
+        .container {
+            margin-top: 20px !important;
+            .note_item {
+                p {
+                    text-overflow: ellipsis;
+                    // required!!
+                    white-space: nowrap;
+                    overflow: hidden
+                }
+                .edit_and_delete_div ion-icon {
+                    margin-top: 45px;
+                    font-size: 25px;
+                }
+                .save_div ion-icon {
+                    font-size: 30px;
+                }
+                .time_info {
+                    font-size: x-small;
+                }
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                border: 1px solid white;
+            }
+            ion-icon {
+                // font-size: 10px;
+                // font-weight: bold;
+            }
+        }
+    }
+}
+
+.themeDefault {
+    ion-input,
+    ion-textarea {
+        border-bottom: 1px solid rgb(0, 0, 0);
+    }
+    ion-toolbar {
+        --background: rgba($color: #222428, $alpha: 1);
+        div {
+            margin-right: 5px;
+        }
+        ion-icon {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        color: rgb(255, 255, 255);
+    }
+    .color_switcher {
+        display: inline-block;
+        text-align: center;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        // margin-left: 10%;
+        ul {
+            float: left;
+            text-decoration: none;
+            list-style-type: none;
+            li {
+                text-align: center;
+                .color {
+                    // background-color: rgba($color: #0082fc, $alpha: 1.0);
+                    min-width: 20px;
+                    width: 20px;
+                    max-width: 20px;
+                    min-height: 20px;
+                    height: 20px;
+                    max-height: 20px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                }
+                .toggleButtonBlack {
+                    margin: 0px 0px 0px 0px !important;
+                    --handle-background: #050505 !important;
+                    --handle-background-checked: #050505 !important;
+                    --background: #ffffff !important;
+                    --background-checked: #191a1b !important;
+                    // max-width: 20px;
+                    // max-height: 20px;
+                    // font-size: 20px;
+                }
+            }
+        }
+    }
+    .body {
+        // background: rgba($color: #222428, $alpha: 1);
+        // color: rgb(255, 255, 255);
+        // min-height: 100%;
+        // height: 100%;
+        // max-height: 100%;
+        .container {
+            margin-top: 20px !important;
+            .note_item {
+                p {
+                    text-overflow: ellipsis;
+                    // required!!
+                    white-space: nowrap;
+                    overflow: hidden
+                }
+                .edit_and_delete_div ion-icon {
+                    margin-top: 45px;
+                    font-size: 25px;
+                }
+                .save_div ion-icon {
+                    font-size: 30px;
+                }
+                .time_info {
+                    font-size: x-small;
+                }
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                border: 1px solid white;
+            }
+            ion-icon {
+                // font-size: 10px;
+                // font-weight: bold;
+            }
+        }
+    }
+}
+
+.themeYellow {
+    ion-input,
+    ion-textarea {
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 1);
+    }
+    ion-fab-button {
+        --background: #f5c800;
+        --background-activated: #f5c800;
+        --background-focused: #f5c800;
+    }
+    ion-toolbar {
+        --background: #f5c800;
+        div {
+            margin-right: 5px;
+        }
+        ion-icon {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        color: rgb(255, 255, 255)
+    }
+    .color_switcher {
+        display: inline-block;
+        text-align: center;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        // margin-left: 10%;
+        ul {
+            float: left;
+            text-decoration: none;
+            list-style-type: none;
+            li {
+                text-align: center;
+                .color {
+                    // background-color: rgba($color: #0082fc, $alpha: 1.0);
+                    min-width: 20px;
+                    width: 20px;
+                    max-width: 20px;
+                    min-height: 20px;
+                    height: 20px;
+                    max-height: 20px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                }
+                .toggleButtonYellow {
+                    margin: 0px 0px 0px 0px !important;
+                    --handle-background: #f5c800 !important;
+                    --handle-background-checked: #f5c800 !important;
+                    --background: #ffffff !important;
+                    --background-checked: rgba(245, 200, 0, 0.5) !important;
+                    // max-width: 20px;
+                    // max-height: 20px;
+                    // font-size: 20px;
+                }
+            }
+        }
+    }
+    .body {
+        // background: rgba($color: #f5c800, $alpha: 1);
+        // color: rgb(255, 255, 255);
+        .container {
+            .fab {}
+            margin-top: 20px !important;
+            .note_item {
+                p {
+                    text-overflow: ellipsis;
+                    // required!!
+                    white-space: nowrap;
+                    overflow: hidden
+                }
+                .edit_and_delete_div ion-icon {
+                    margin-top: 45px;
+                    font-size: 25px;
+                }
+                .save_div ion-icon {
+                    font-size: 30px;
+                }
+                .time_info {
+                    font-size: x-small;
+                }
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                border: 1px solid #f5c800;
+            }
+            ion-icon {
+                // font-size: 10px;
+                // font-weight: bold;
+            }
+        }
+    }
+}
+
+.themeGreen {
+    ion-input,
+    ion-textarea {
+        border-bottom: 1px solid rgba($color: #000000, $alpha: 1);
+    }
+    ion-fab-button {
+        --background: #00defc;
+        --background-activated: #00defc;
+        --background-focused: #00defc;
+    }
+    ion-toolbar {
+        --background: #00defc;
+        div {
+            margin-right: 5px;
+        }
+        ion-icon {
+            font-size: 30px;
+            font-weight: bold;
+        }
+        color: rgb(255, 255, 255)
+    }
+    .color_switcher {
+        display: inline-block;
+        text-align: center;
+        min-width: 100%;
+        width: 100%;
+        max-width: 100%;
+        // margin-left: 10%;
+        ul {
+            float: left;
+            text-decoration: none;
+            list-style-type: none;
+            li {
+                text-align: center;
+                .color {
+                    // background-color: rgba($color: #0082fc, $alpha: 1.0);
+                    min-width: 20px;
+                    width: 20px;
+                    max-width: 20px;
+                    min-height: 20px;
+                    height: 20px;
+                    max-height: 20px;
+                    border-radius: 50%;
+                    margin-left: 15px;
+                }
+                .toggleButtonGreen {
+                    margin: 0px 0px 0px 0px !important;
+                    --handle-background: #00defc !important;
+                    --handle-background-checked: rgb(0, 222, 252) !important;
+                    --background: #ffffff !important;
+                    --background-checked: rgba(0, 222, 252, 0.5) !important;
+                    // max-width: 20px;
+                    // max-height: 20px;
+                    // font-size: 20px;
+                }
+            }
+        }
+    }
+    .body {
+        // background: rgba($color: #00defc, $alpha: 1);
+        // color: rgb(255, 255, 255);
+        .container {
+            .fab {}
+            margin-top: 20px !important;
+            .note_item {
+                p {
+                    text-overflow: ellipsis;
+                    // required!!
+                    white-space: nowrap;
+                    overflow: hidden
+                }
+                .edit_and_delete_div ion-icon {
+                    margin-top: 45px;
+                    font-size: 25px;
+                }
+                .save_div ion-icon {
+                    font-size: 30px;
+                }
+                .time_info {
+                    font-size: x-small;
+                }
+            }
+            .separator {
+                height: 2px;
+                width: 100%;
+                border: 1px solid #00defc;
+            }
+            ion-icon {
+                // font-size: 10px;
+                // font-weight: bold;
+            }
+        }
+    }
+    .container {
+        margin-top: 20px !important;
+        .note_item {
+            p {
+                text-overflow: ellipsis;
+                // required!!
+                white-space: nowrap;
+                overflow: hidden
+            }
+            .edit_and_delete_div ion-icon {
+                margin-top: 45px;
+                font-size: 25px;
+            }
+            .save_div ion-icon {
+                font-size: 30px;
+            }
+            .time_info {
+                font-size: x-small;
+            }
+        }
+        .separator {
+            height: 2px;
+            width: 100%;
+            border: 1px solid rgb(0, 0, 0);
+        }
+        ion-icon {
+            // font-size: 10px;
+            // font-weight: bold;
+        }
+    }
+}

@@ -1,0 +1,110 @@
+<ion-content [ngClass]="
+themes[0].status ? 'themeBlack' : 
+                                (themes[1].status ? 'themeYellow' : 
+                                                                (themes[2].status ? 'themeGreen' : 'themeDefault'))">
+
+
+    <ion-header>
+
+        <ion-toolbar>
+            <ion-menu-toggle slot="end">
+                <ion-icon name="settings"></ion-icon>
+            </ion-menu-toggle>
+            <ion-title class="ion-text-center">Notes</ion-title>
+
+
+        </ion-toolbar>
+    </ion-header>
+
+    <div class="body">
+        <div class="color_switcher ion-text-center">
+            <ul *ngFor="let theme of themes; let i=index">
+                <li>
+                    <ion-toggle (ionChange)="themeSwitch(i)" [(ngModel)]="theme.status" [ngClass]="
+                    theme.name === 'themeBlack' ? 'toggleButtonBlack' : 
+                                                    (theme.name === 'themeYellow' ? 'toggleButtonYellow' : 
+                                                                                    (theme.name === 'themeGreen' ? 'toggleButtonGreen' : 'toggleButtonDefault'))">
+
+                    </ion-toggle>
+                    <!-- <div class="color" color="theme.color"></div> -->
+                </li>
+            </ul>
+
+        </div>
+
+        <div class="container">
+
+            <div>
+                <ion-grid>
+                    <ion-row class="note_item" *ngFor="let note of notes">
+                        <ion-col size="6" (click)="editNote(note)">
+                            <h5>{{ note.title }}</h5>
+                            <p>{{ note.content }}</p>
+                            <p class="time_info" *ngIf="note.create_date !== undefined && note.create_time !== undefined
+                                                         && note.create_date === date">
+                                Created today at {{note.create_time}}
+                            </p>
+                            <p class="time_info" *ngIf="note.create_date !== undefined && note.create_time !== undefined
+                                                         && note.create_date !== date">
+                                Created {{ note.create_date }} at {{note.create_time}}
+                            </p>
+                            <p class="time_info" *ngIf="note.update_date !== undefined && note.update_time !== undefined
+                                                         && (note.update_date !== note.create_date || note.update_time !== note.create_time)
+                                                         && note.create_date !== date">
+                                Updated {{ note.update_date }} at {{note.update_time}}
+                            </p>
+                            <p class="time_info" *ngIf="note.update_date !== undefined && note.update_time !== undefined
+                                                         && (note.update_date !== note.create_date || note.update_time !== note.create_time) 
+                                                         && note.create_date === date">
+                                Updated today at {{note.update_time}}
+                            </p>
+                        </ion-col>
+                        <ion-col size="6">
+
+                            <!-- 
+            
+             -->
+                            <ion-row>
+                                <ion-col class="edit_and_delete_div" size="4">
+                                    <p>
+                                        <ion-icon name="create" (click)="editNote(note)"></ion-icon>
+                                    </p>
+
+                                </ion-col>
+                                <ion-col class="edit_and_delete_div" size="4">
+
+                                    <p>
+                                        <ion-icon name="save" (click)="saveAsTxt(note)"></ion-icon>
+                                    </p>
+
+                                </ion-col>
+
+
+                                <ion-col class="edit_and_delete_div" size="4">
+                                    <p>
+                                        <ion-icon color="danger" name="trash" (click)="deleteNote(note)"></ion-icon>
+                                    </p>
+                                </ion-col>
+                            </ion-row>
+
+
+
+                        </ion-col>
+                        <div class="separator"></div>
+                    </ion-row>
+
+                </ion-grid>
+
+            </div>
+
+        </div>
+        <ion-fab class="fab" vertical="bottom" horizontal="end" slot="fixed">
+            <ion-fab-button>
+                <ion-icon (click)="createNote()" name="add"></ion-icon>
+            </ion-fab-button>
+
+            <!-- <ion-icon (click)="goToSettings()" name="options"></ion-icon> -->
+        </ion-fab>
+    </div>
+
+</ion-content>

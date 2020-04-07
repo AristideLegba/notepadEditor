@@ -1,0 +1,55 @@
+<ion-content [ngClass]="
+themes[0].status ? 'themeBlack' : 
+                                (themes[1].status ? 'themeYellow' : 
+                                                                (themes[2].status ? 'themeGreen' : 'themeDefault'))">
+
+
+    <ion-header>
+
+        <ion-toolbar>
+            <ion-buttons slot="start">
+                <ion-button icon-only color="light" (click)="cancel()">
+                    <ion-icon icon-only name="arrow-back"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+
+            <ion-title text-center>
+                <div>
+                    {{ test }}
+                </div>
+            </ion-title>
+            <ion-buttons slot="end">
+                <ion-button icon-only color="light" *ngIf="test === 'Edit'" (click)="editNote()">
+                    <ion-icon icon-only name="save"></ion-icon>
+                </ion-button>
+                <ion-button icon-only color="light" *ngIf="test === 'Create'" (click)="saveNote()">
+                    <ion-icon icon-only name="save"></ion-icon>
+                </ion-button>
+            </ion-buttons>
+
+
+        </ion-toolbar>
+    </ion-header>
+
+    <div padding>
+
+        <div *ngIf="test === 'Create'" class="container">
+            <div class="note_item">
+                <ion-input [(ngModel)]="noteModel.title" placeholder="Title"></ion-input>
+                <ion-textarea [(ngModel)]="noteModel.content" placeholder="Text here ..." auto-grow>
+                </ion-textarea>
+
+
+            </div>
+        </div>
+        <div *ngIf="test === 'Edit'" class="container">
+            <div class="note_item">
+                <ion-input [(ngModel)]="itemToEdit.title" placeholder="Title"></ion-input>
+                <ion-textarea [(ngModel)]="itemToEdit.content" placeholder="Text here ..." auto-grow>
+                </ion-textarea>
+
+            </div>
+        </div>
+
+    </div>
+</ion-content>
