@@ -17,7 +17,7 @@ This app is a note editor made with ionic 4 /Angular 8.
 
 ## Some Images
 
-![](https://aristidelegba.github.io/notepadEditor/docs owner/Capture_black.PNG)
+![](https://aristidelegba.github.io/notepadEditor/docs_owner/Capture_black.PNG)
 
 ![](https://aristidelegba.github.io/notepadEditor/docs owner/Capture.PNG)
 
